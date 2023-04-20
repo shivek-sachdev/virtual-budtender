@@ -84,3 +84,6 @@ with tab2:
    
 # Display the string in your Streamlit app
     #st.write(table_string)
+
+
+st.write("Wanna collab? Visit www.cantrak.tech | email: shivek@tis.co.th or call me at 0946608854")
