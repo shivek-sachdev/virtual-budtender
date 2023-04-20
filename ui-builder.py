@@ -73,8 +73,8 @@ with tab1:
             message(st.session_state['past'][i], is_user=True, key=str(i) + '_user')
             message(st.session_state["generated"][i], key=str(i), avatar_style="adventurer", seed=420)
 
-        with st.expander("Show Messages"):
-            st.write(messages)
+        #with st.expander("Show Messages"):
+            #st.write(messages)
 
 with tab2:
 
