@@ -8,9 +8,9 @@ import random
 
 tab1, tab2 = st.tabs(["Canbot", "Strain Data"])
 
-openai.api_key = "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"
 
-df = pd.read_csv('combined.csv')
+
+df = pd.read_csv('https://raw.githubusercontent.com/shivek-sachdev/virtual-budtender/master/combined.csv')
 table_string = df.to_string(index=False)
 
 with tab1:
