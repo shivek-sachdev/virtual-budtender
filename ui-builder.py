@@ -6,7 +6,8 @@ import openai
 import pandas as pd
 import random
 
-st.image("image.png")
+#st.image("image.png")
+st.image("https://github.com/shivek-sachdev/virtual-budtender/blob/master/image.png?raw=true")
 tab1, tab2 = st.tabs(["Canbot", "Strain Data"])
 
 openai.api_key = st.secrets["apikey"]
