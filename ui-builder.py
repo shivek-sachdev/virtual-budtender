@@ -6,9 +6,10 @@ import openai
 import pandas as pd
 import random
 
+st.image("image.png")
 tab1, tab2 = st.tabs(["Canbot", "Strain Data"])
 
-
+openai.api_key = st.secrets["apikey"]
 
 df = pd.read_csv('https://raw.githubusercontent.com/shivek-sachdev/virtual-budtender/master/combined.csv')
 table_string = df.to_string(index=False)
