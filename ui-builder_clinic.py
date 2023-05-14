@@ -8,25 +8,24 @@ import random
 
 #st.image("image.png")
 st.image("https://github.com/shivek-sachdev/virtual-budtender/blob/master/image.png?raw=true")
-tab1, tab2 = st.tabs(["Canbot", "Strain Data"])
+tab1, tab2 = st.tabs(["Canbot x KANA", "Product Data"])
 
 openai.api_key = st.secrets["apikey"]
 
 #df = pd.read_csv('https://raw.githubusercontent.com/shivek-sachdev/virtual-budtender/master/clinic_combined.csv')
-df = pd.read_csv('clinic_combined.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/shivek-sachdev/virtual-budtender/master/clinic_combined.csv')
 table_string = df.to_string(index=False)
 
 with tab1:
-    st.title("Meet Canbot from Cantrak!")
-    st.subheader("🤖🚬🌿 World's first AI-Budtender")
+    st.title("Canbot x KANA | Alpha Release")
+    st.subheader("🤖🚬🌿 Ask me anything...")
     #st.subheader("🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿")
-    st.write("Canbot's Attitude: a cowboy, a frat bro or a rude d*ck")
-    st.write("Note: Refresh the site to meet a new Canbot with a different attitude")
+    st.write("Canbot's is trained on KANA's Product Data")
     st.markdown("""---""")
     st.subheader("Try these conversations: ")
-    st.caption("I need something to get me creative")
-    st.caption("What strains do you have?")
-    st.caption("Note: Canbot has been partially trained on Cantrak's data + it will not let you know the price, unless you really ask :)")
+    st.caption("Anything to help with me sleep?")
+    st.caption("Do you have any edibles?")
+    st.caption("Any non-cannabis products?")
 #model = st.selectbox(
 #    "Select a model",
 #    ("gpt-3.5-turbo", "gpt-4")
@@ -59,7 +58,7 @@ with tab1:
         st.session_state['messages'] = get_initial_message(initial_persona)
 
     if query:
-        with st.spinner("generating..."):
+        with st.spinner("Hmm...🤔"):
         
             messages = st.session_state['messages']
             messages = update_chat(messages, "user", query)
